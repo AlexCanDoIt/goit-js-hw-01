@@ -5,7 +5,7 @@ while (input !== null) {
   input = prompt('Введите число:');
   Number(input);
 
-  if (Number.isNaN(Number(input)) === true) {
+  if (isNaN(input) === true) {
     alert('Было введено не число, попробуйте еще раз.');
   } else {
     total += Number(input);
