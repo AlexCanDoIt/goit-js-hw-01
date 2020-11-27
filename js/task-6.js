@@ -5,11 +5,11 @@ while (input !== null) {
   input = prompt('Введите число:');
   Number(input);
 
-  if (Number(input) === NaN) {
+  if (Number.isNaN(Number(input)) === true) {
     alert('Было введено не число, попробуйте еще раз.');
   } else {
     total += Number(input);
   }
 }
 
-alert(total);
+alert('Общая сумма чисел равна ' + total);
