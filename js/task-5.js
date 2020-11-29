@@ -1,9 +1,7 @@
-let country;
-let price;
-
-country = prompt(
+const country = prompt(
   'Введите страну для доставки Циклонной Нео Армстронг Реактивной Генераторной Пушки:',
 );
+let price;
 
 if (country === null) {
   alert('Отменено пользователем!');
@@ -30,5 +28,9 @@ if (country === null) {
 }
 
 if (price !== undefined) {
-  alert(`Доставка в ${country} будет стоить ${price} кредитов`);
+  alert(
+    `Доставка в ${
+      country[0].toUpperCase() + country.slice(1).toLowerCase()
+    } будет стоить ${price} кредитов`,
+  );
 }

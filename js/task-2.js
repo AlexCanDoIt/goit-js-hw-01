@@ -1,15 +1,13 @@
 const total = 100;
-let ordered;
-let difference;
+const orderedRef = document.querySelector('input[name="ordered"]');
+const buttonRef = document.querySelector('button');
 
-ordered = prompt(
-  'Введите количество Циклонных Нео Армстронг Реактивных Генераторных Пушек:',
-);
-
-difference = ordered - total;
-
-ordered > total
-  ? console.log(
-      `На складе недостает ${difference} единиц Циклонных Нео Армстронг Реактивных Генераторных Пушек.`,
-    )
-  : console.log('Заказ оформлен, с вами свяжется менеджер.');
+buttonRef.addEventListener('click', () => {
+  const ordered = Number(orderedRef.value);
+  const difference = ordered - total;
+  const message =
+    ordered > total
+      ? `На складе недостает ${difference} единиц Циклонных Нео Армстронг Реактивных Генераторных Пушек.`
+      : 'Заказ оформлен, с вами свяжется менеджер.';
+  alert(message);
+});
